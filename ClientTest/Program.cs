@@ -1,4 +1,6 @@
-﻿using RpcLite.TestService;
+﻿using System;
+using RpcLite.Client;
+using RpcLite.TestService;
 
 namespace ClientTest
 {
@@ -6,8 +8,10 @@ namespace ClientTest
 	{
 		static void Main(string[] args)
 		{
-			var client = RpcLite.Client.RpcClientBase<ITestService>.GetInstance();
-			var p = client.Client.GetDateTimeString();
+			var client = RpcClientBase<ITestService>.GetInstance("http://localhost:53189/api/test/");
+			var time = client.Client.GetDateTimeString();
+			Console.WriteLine("Time from service is " + time);
+			Console.ReadLine();
 		}
 	}
 }

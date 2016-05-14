@@ -12,7 +12,7 @@
 			$.ajax(
 			{
 				type: "POST",
-				url: "api/test/GetProductById",
+				url: "api/test2/GetProductById",
 				dataType: "json",
 				contentType: "application/json",
 				data: JSON.stringify(postData),
@@ -30,11 +30,10 @@
 
 		function TestGetDateTimeString()
 		{
-			var postData = 1;
 			$.ajax(
 			{
 				type: "POST",
-				url: "api/test/GetProductById",
+				url: "api/test/GetDateTimeString",
 				dataType: "json",
 				contentType: "application/json",
 				//data: JSON.stringify(postData),
@@ -60,7 +59,7 @@
 			$.ajax(
 			{
 				type: "POST",
-				url: "api/test/AddProduct",
+				url: "api/test2/AddProduct",
 				dataType: "json",
 				contentType: "application/json",
 				data: JSON.stringify(postData),
@@ -99,12 +98,13 @@
 </head>
 <body>
 
+	Service1:
 	<button id="GetDateTimeString">GetDateTimeString</button>
+	<br />
+	Serivce2:
 	<button id="GetProductById">GetProductById</button>
-	<button id="AddProduct">AddProduct</button>
-
-	<div id="result">
-
-	</div>
+	<button id="AddProduct">AddProduct</button><br />
+	Test Result:
+	<div id="result"></div>
 </body>
 </html>
