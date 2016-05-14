@@ -8,7 +8,8 @@ namespace ClientTest
 	{
 		static void Main(string[] args)
 		{
-			var client = RpcClientBase<ITestService>.GetInstance("http://localhost:53189/api/test2/");
+			//change url as real address of RpcLiteServiceTest when running
+			var client = ClientFactory.GetInstance<ITestService>("http://localhost:53189/api/test2/");
 
 			var time = client.Client.GetDateTimeString();
 			Console.WriteLine("Time from service is " + time);
