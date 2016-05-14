@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+
+		function TestGetDateTimeString()
+		{
+			$.ajax(
+			{
+				type: "POST",
+				url: "api/test/GetDateTimeString",
+				dataType: "json",
+				contentType: "application/json",
+				//data: JSON.stringify(postData),
+				success: function (arg)
+				{
+					var sjson = JSON.stringify(arg);
+					$("#result").text("Time from service is: " + sjson);
+				},
+				error: function (arg)
+				{
+					$("#result").text(arg);
+				}
+			});
+		}
+
+		$(document).ready(function ()
+		{
+			$("#GetDateTimeString").click(function ()
+			{
+				TestGetDateTimeString();
+			});
+		});
+
+	</script>
+</head>
+<body>
+
+	<button id="GetDateTimeString">GetDateTimeString</button>
+	<div id="result">
+	</div>
+	<br />
+	<br />
+	<a href="/api/test/GetDateTimeString" target="_blank" style="color: blue;">/api/test/GetDateTimeString</a>
+</body>
+</html>
