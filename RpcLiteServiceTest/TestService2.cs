@@ -4,7 +4,7 @@ using Contract;
 
 namespace RpcLiteServiceTest
 {
-	public class TestService2
+	public class TestService2 : ITestService
 	{
 		public string GetDateTimeString()
 		{
