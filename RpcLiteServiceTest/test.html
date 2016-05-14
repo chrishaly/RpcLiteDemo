@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+
+		function TestGetProductById()
+		{
+			var postData = 1;
+			$.ajax(
+			{
+				type: "POST",
+				url: "api/test/GetProductById",
+				dataType: "json",
+				contentType: "application/json",
+				data: JSON.stringify(postData),
+				success: function (arg)
+				{
+					var sjson = JSON.stringify(arg);
+					$("#result").text(sjson);
+				},
+				error: function (arg)
+				{
+					$("#result").text(arg);
+				}
+			});
+		}
+
+		function TestGetDateTimeString()
+		{
+			var postData = 1;
+			$.ajax(
+			{
+				type: "POST",
+				url: "api/test/GetProductById",
+				dataType: "json",
+				contentType: "application/json",
+				//data: JSON.stringify(postData),
+				success: function (arg)
+				{
+					var sjson = JSON.stringify(arg);
+					$("#result").text(sjson);
+				},
+				error: function (arg)
+				{
+					$("#result").text(arg);
+				}
+			});
+		}
+
+		function TestAddProduct()
+		{
+			var postData = {
+				Name: "Book",
+				Price: 50
+			};
+
+			$.ajax(
+			{
+				type: "POST",
+				url: "api/test/AddProduct",
+				dataType: "json",
+				contentType: "application/json",
+				data: JSON.stringify(postData),
+				success: function (arg)
+				{
+					var sjson = JSON.stringify(arg);
+					$("#result").text(sjson);
+				},
+				error: function (arg)
+				{
+					$("#result").text(arg);
+				}
+			});
+		}
+
+		$(document).ready(function ()
+		{
+			$("#GetDateTimeString").click(function ()
+			{
+				TestGetDateTimeString();
+			});
+
+			$("#GetProductById").click(function ()
+			{
+				TestGetProductById();
+			});
+
+			$("#AddProduct").click(function ()
+			{
+				TestAddProduct();
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+
+	<button id="GetDateTimeString">GetDateTimeString</button>
+	<button id="GetProductById">GetProductById</button>
+	<button id="AddProduct">AddProduct</button>
+
+	<div id="result">
+
+	</div>
+</body>
+</html>
