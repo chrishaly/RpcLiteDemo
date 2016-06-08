@@ -243,3 +243,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/RpcLiteServiceTest2.zip
+/RpcLiteServiceTest2 with packages.zip
