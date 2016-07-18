@@ -1,23 +1,23 @@
 {
   "dependencies": {
-    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final",
-    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
     "Microsoft.NETCore.App": {
-      "type": "platform",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "type": "platform"
     },
-    "RpcLite": "1.0.1.14"
-  },
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
+    "Microsoft.Extensions.Logging.Console": "1.0.0",
+    "RpcLite": "1.0.1.16"  },
 
   "tools": {
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
   },
 
   "frameworks": {
     "netcoreapp1.0": {
       "imports": [
         "dotnet5.6",
-        "dnxcore50",
         "portable-net45+win8"
       ]
     }
@@ -25,11 +25,14 @@
 
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "copyToOutput": [ "rpclite.config.json" ]
   },
 
   "runtimeOptions": {
-    "gcServer": true
+    "configProperties": {
+      "System.GC.Server": true
+    }
   },
 
   "publishOptions": {

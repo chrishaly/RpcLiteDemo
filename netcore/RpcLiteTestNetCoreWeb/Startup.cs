@@ -25,10 +25,11 @@ namespace RpcLiteTestNetCoreWeb
 			}
 			catch (Exception ex)
 			{
+				Console.WriteLine(ex);
 				throw;
 			}
 
-			app.Run(async (context) =>
+			app.Run(async context =>
 			{
 				await context.Response.WriteAsync("Hello World!");
 			});

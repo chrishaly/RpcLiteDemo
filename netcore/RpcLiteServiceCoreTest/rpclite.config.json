@@ -1,0 +1,24 @@
+{
+  "version": "1.1",
+  "appId": 10000,
+  "service": {
+    "services": [
+      {
+        "name": "TestService",
+        "path": "/api/service/",
+        "type": "RpcLiteServiceCoreTest.TestService2, RpcLiteServiceCoreTest"
+      }
+    ],
+    "paths": [
+      "/api/service/"
+    ]
+  },
+  //"client": {
+  //  "resolver": {
+  //    "name": "default",
+  //    "type": "RpcLite.Resolvers.HttpClientAddressResolver, RpcLite.Resolvers"
+  //  },
+  //  "clients": [
+  //  ]
+  //}
+}

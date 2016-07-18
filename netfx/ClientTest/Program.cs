@@ -11,13 +11,13 @@ namespace ClientTest
 			//change url as real address of RpcLiteServiceTest when running
 			var client = ClientFactory.GetInstance<ITestService>("http://localhost:53189/api/test2/");
 
-			var time = client.Client.GetDateTimeString();
+			var time = client.GetDateTimeString();
 			Console.WriteLine("Time from service is " + time);
 
-			var product = client.Client.GetProductById(1);
+			var product = client.GetProductById(1);
 			Console.WriteLine(product.Name);
 
-			var testService = client.Client;
+			var testService = client;
 			var addedProductId = testService.AddProduct(new Product
 			{
 				Name = "Book",
