@@ -8,18 +8,24 @@ namespace HelloRpcLiteServiceCore
 {
 	public class Startup
 	{
-		// This method gets called by the runtime. Use this method to add services to the container.
-		// For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
+			//1. add routing Middleware
+			services.AddRouting();
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 		{
 			loggerFactory.AddConsole();
 
-			RpcLite.Config.RpcLiteInitializer.Initialize(app);
+			//2. config RpcLite
+			app.UseRpcLite(builder =>
+			{
+				builder
+					.UseAppId("10001")
+					.UseService<TestService1>(nameof(TestService1), "api/service/", null)
+					.UseServicePaths("api/service/");
+			});
 
 			if (env.IsDevelopment())
 			{
@@ -28,8 +34,23 @@ namespace HelloRpcLiteServiceCore
 
 			app.Run(async context =>
 			{
-				await context.Response.WriteAsync("Hello World!");
+				context.Response.ContentType = "text/html";
+				await context.Response.WriteAsync(@"
+<style>
+	a:visited {
+		color: blue;
+	}
+</style>
+
+Hello World! 
+<br /> 
+<div style='font-size: 1.5em'>
+<a href='api/service/'>api list</a><br /> 
+<a href='api/service/GetDateTimeString'>invoke api GetDateTimeString</a><br /> 
+</div>
+");
 			});
+
 		}
 	}
 }

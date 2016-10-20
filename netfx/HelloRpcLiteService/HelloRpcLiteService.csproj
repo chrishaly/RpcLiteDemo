@@ -43,15 +43,15 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RpcLite, Version=1.0.1.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\RpcLite.1.0.1.17\lib\net40\RpcLite.dll</HintPath>
+    <Reference Include="RpcLite, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RpcLite.1.0.2.2\lib\net40\RpcLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RpcLite.AspNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\RpcLite.1.0.1.17\lib\net40\RpcLite.AspNet.dll</HintPath>
+    <Reference Include="RpcLite.NetFx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RpcLite.1.0.2.2\lib\net40\RpcLite.NetFx.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -101,9 +101,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.html" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IProductService.cs" />
+    <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

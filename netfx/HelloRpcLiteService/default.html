@@ -11,7 +11,7 @@
 			$.ajax(
 			{
 				type: "POST",
-				url: "api/test/GetDateTimeString",
+				url: "api/service/GetDateTimeString",
 				dataType: "json",
 				contentType: "application/json",
 				//data: JSON.stringify(postData),
@@ -38,12 +38,12 @@
 	</script>
 </head>
 <body>
-
+	click button to invoke RpcLite api GetDateTimeString<br />
 	<button id="GetDateTimeString">GetDateTimeString</button>
 	<div id="result">
 	</div>
 	<br />
 	<br />
-	<a href="/api/test/GetDateTimeString" target="_blank" style="color: blue;">/api/test/GetDateTimeString</a>
+	<a href="api/service/GetDateTimeString" target="_blank" style="color: blue;">api/test/GetDateTimeString</a>
 </body>
 </html>
