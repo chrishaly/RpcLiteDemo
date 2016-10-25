@@ -7,9 +7,12 @@
       "version": "1.0.1",
       "type": "platform"
     },
-    "RpcLite": "1.0.2.2" },
+    "RpcLite": "1.0.2.4"
+  },
+
   "tools": {
   },
+
   "frameworks": {
     "netcoreapp1.0": {
       "imports": [
@@ -19,22 +22,25 @@
       ]
     }
   },
+
   "buildOptions": {
     "emitEntryPoint": true,
     "preserveCompilationContext": true,
     "copyToOutput": [ "rpclite.config.json" ]
   },
+
   "runtimeOptions": {
     "gcServer": true
   },
+
   "publishOptions": {
     "include": [
       "wwwroot",
       "web.config"
     ]
   },
-    "scripts": {
-      "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
-    },
-    "RpcLite": "1.0.1.28"
+
+  "scripts": {
+    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
+  }
 }

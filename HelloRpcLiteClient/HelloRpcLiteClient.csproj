@@ -39,11 +39,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="RpcLite, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RpcLite.1.0.2.2\lib\net40\RpcLite.dll</HintPath>
+      <HintPath>..\packages\RpcLite.1.0.2.4\lib\net40\RpcLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RpcLite.NetFx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RpcLite.1.0.2.2\lib\net40\RpcLite.NetFx.dll</HintPath>
+      <HintPath>..\packages\RpcLite.1.0.2.4\lib\net40\RpcLite.NetFx.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

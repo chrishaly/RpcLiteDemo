@@ -1,5 +1,5 @@
 ﻿using System;
-using RpcLite.AspNet;
+using RpcLite.Config;
 
 namespace RpcLiteServiceTest
 {

@@ -9,7 +9,7 @@ namespace ClientTest
 	{
 		static void Main(string[] args)
 		{
-			RpcLite.AspNet.RpcInitializer.Initialize(new RpcConfig());
+			RpcInitializer.Initialize(new RpcConfig());
 
 			//change url as real address of RpcLiteServiceTest when running
 			var client = ClientFactory.GetInstance<ITestService>("http://localhost:53189/api/service/");

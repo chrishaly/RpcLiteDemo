@@ -41,6 +41,15 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ServiceNuGetTest.AspNetCore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloRpcLiteClient", "HelloRpcLiteClient\HelloRpcLiteClient.csproj", "{D39B0FD8-ADDD-4F89-BA50-EFD050C9705A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MonitorTest", "MonitorTest", "{4872DBBB-C0E6-46AB-AEFB-7EE4CE38A3CE}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RpcLiteMonitorTest", "RpcLiteMonitorTest\RpcLiteMonitorTest.xproj", "{8DDF9DEE-3072-48DE-A118-18DABD7D2EDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C307D3CD-9FC1-47FD-AC20-6FFFECFB92F0}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +100,10 @@ Global
 		{D39B0FD8-ADDD-4F89-BA50-EFD050C9705A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D39B0FD8-ADDD-4F89-BA50-EFD050C9705A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D39B0FD8-ADDD-4F89-BA50-EFD050C9705A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DDF9DEE-3072-48DE-A118-18DABD7D2EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDF9DEE-3072-48DE-A118-18DABD7D2EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDF9DEE-3072-48DE-A118-18DABD7D2EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDF9DEE-3072-48DE-A118-18DABD7D2EDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,5 +125,6 @@ Global
 		{2716A642-E01D-4312-9D08-CA4608C4688D} = {1815C74D-D94E-42F9-A7CD-53F6B589C911}
 		{9C220078-0ABA-4A4F-B3B2-ED92DC23F1AA} = {1815C74D-D94E-42F9-A7CD-53F6B589C911}
 		{D39B0FD8-ADDD-4F89-BA50-EFD050C9705A} = {F4B3B75D-ED21-49EA-A47A-79A22CD6C355}
+		{8DDF9DEE-3072-48DE-A118-18DABD7D2EDF} = {4872DBBB-C0E6-46AB-AEFB-7EE4CE38A3CE}
 	EndGlobalSection
 EndGlobal

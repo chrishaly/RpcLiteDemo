@@ -1,6 +1,6 @@
 ﻿using System;
-using RpcLite.AspNet;
 using RpcLite.Client;
+using RpcLite.Config;
 
 namespace HelloRpcLiteClient
 {
